@@ -7,13 +7,18 @@ import { GithubService } from '../services/github.service';
     templateUrl: 'profile.component.html'
 })
 export class ProfileComponent { 
-    user:any[];
+    user:any;
     repos:any[];
+    username:string;
 
     // inject service as a dependency
     constructor(private _githubService: GithubService){
+        this.user = false;
+    }
 
-        // subscribe to the observable returned by the service
+    searchUser(){
+        this._githubService.updateUser(this.username);
+
         this._githubService.getUser().subscribe(user => {
             this.user = user;
         });
