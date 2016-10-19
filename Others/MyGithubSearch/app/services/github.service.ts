@@ -24,4 +24,8 @@ export class GithubService{
             this.client_id + "&client_secret=" + this.client_secret)
             .map(res => res.json()); // returns an observable in JSON format
     }
+
+    updateUser(username:string){
+        this.username = username;
+    }
 }
