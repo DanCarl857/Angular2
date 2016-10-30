@@ -9,29 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.Header = "this is the header part by export classes";
-        this.Array = ["In the aRRAY Part"];
-        this.counter = 0;
-        this.show = "false";
+var Router2Component = (function () {
+    function Router2Component() {
     }
-    AppComponent.prototype.toggleSidebar = function () {
-        if (this.show == 'false') {
-            this.show = 'true';
-        }
-        else {
-            this.show = 'false';
-        }
-    };
-    AppComponent = __decorate([
+    Router2Component = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: './app/templates/index.html'
+            template: "\n    <h2>Router Link 2</h2>\n    <p>Get your Router2 here</p>"
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], Router2Component);
+    return Router2Component;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.Router2Component = Router2Component;
+//# sourceMappingURL=Router2.component.js.map
