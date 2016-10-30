@@ -11,20 +11,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
-var navbar_component_1 = require('./components/navbar/navbar.component');
-var jumbotron_component_1 = require('./components/jumbotron/jumbotron.component');
-var about_component_1 = require('./components/pages/about.component');
-var home_component_1 = require('./components/pages/home.component');
-var app_routing_1 = require('./app.routing');
+var router_1 = require('@angular/router');
+var Router1_component_1 = require('./Router1.component');
+var Router2_component_1 = require('./Router2.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
-            declarations: [app_component_1.AppComponent, navbar_component_1.NavbarComponent,
-                jumbotron_component_1.JumbotronComponent, about_component_1.AboutComponent,
-                home_component_1.HomeComponent],
+            imports: [
+                platform_browser_1.BrowserModule,
+                router_1.RouterModule.forRoot([
+                    //       { path: '/', component: AppComponent },
+                    { path: 'Router1', component: Router1_component_1.Router1Component },
+                    { path: 'Router2', component: Router2_component_1.Router2Component }
+                ])
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                Router1_component_1.Router1Component,
+                Router2_component_1.Router2Component,
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
